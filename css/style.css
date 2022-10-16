@@ -1,0 +1,91 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(231, 0, 0);
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  height: 2rem;
+  background-color: skyblue;
+  position: relative;
+  z-index: 10;
+}
+
+div.menu {
+  display: none;
+  list-style: none;
+}
+
+.section {
+  width: 100%;
+  text-align: center;
+}
+
+.section:hover {
+  background-color: rgb(51, 61, 195);
+  transition: all 0.2s ease;
+}
+.section:hover a {
+  color: white;
+}
+.section:hover .head {
+  color: rgb(255, 255, 255);
+}
+.section:hover div.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(3, 40, 104);
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  -webkit-animation: 1 0.5s 向下出現動畫 forwards;
+          animation: 1 0.5s 向下出現動畫 forwards;
+}
+.section:hover div.menu a {
+  padding: 1rem 0;
+}
+.section:hover div.menu a:hover {
+  background-color: burlywood;
+  color: rgb(133, 111, 255);
+  transition: all 0.2s ease;
+}
+
+.all {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.B {
+  width: 80%;
+}
+
+@-webkit-keyframes 向下出現動畫 {
+  from {
+    top: -4rem;
+    opacity: 0;
+  }
+  to {
+    top: 0.25rem;
+  }
+}
+
+@keyframes 向下出現動畫 {
+  from {
+    top: -4rem;
+    opacity: 0;
+  }
+  to {
+    top: 0.25rem;
+  }
+}/*# sourceMappingURL=style.css.map */

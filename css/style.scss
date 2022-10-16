@@ -1,0 +1,41 @@
+*{margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;}
+a {
+    text-decoration: none;
+    color: rgb(231, 0, 0);
+    font-size:1.5rem;
+}
+.container {
+    width: 80%;
+    // height: 3rem;
+    display: flex;
+    height: 2rem;
+    // justify-content: space-evenly;//水平均分
+    background-color: skyblue;
+    position:relative;z-index:10;
+}
+div.menu{display: none;list-style: none;}//下拉選單資料隱藏
+.section{width: 100%;text-align: center;}//每組設定(有三組)
+.section:hover{//懸停在其中一組時
+    // display: flex;justify-content: center;align-items: center;
+    a{color: white;}
+    .head{color: rgb(255, 255, 255);}//*文字* 改白色
+    background-color: rgb(51, 61, 195);//該組 *容器* 改被景色
+    div.menu{display:flex;
+            flex-direction:column;
+            background-color: rgb(3, 40, 104);
+            position:relative;
+            width: 100%;
+            z-index:-1;
+            animation:1 0.5s 向下出現動畫 forwards;
+            a{padding: 1rem 0;}
+            a:hover{background-color: burlywood;
+                    color: rgb(133, 111, 255);transition: all 0.2s ease;}}//將選單選項用flex垂直排列  //當選項被懸停時改變背景色
+    transition: all 0.2s ease;
+}
+.all{display: flex;flex-direction: column;width:100%;align-items: center;}
+.B{width: 80%;}
+// @keyframes 向下出現動畫{ from{display: none;}to{display:flex;flex-direction:column;} } 
+@keyframes 向下出現動畫{ from{top:-4rem;opacity: 0;}to{top:0.25rem;} } 
+
